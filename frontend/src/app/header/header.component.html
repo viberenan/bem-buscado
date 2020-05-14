@@ -1,61 +1,46 @@
-<header class="container text-center py-3">
-  <img src="assets/img/logo_bembuscado.png">
-</header>
-<nav class="navbar navbar-expand-lg bg-primary" color-on-scroll="500">
-  <div class="container">
-      <div class="navbar-translate">
-          <a class="navbar-brand" [routerLink]="['/home']">
-              Página Inicial
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-bar bar1"></span>
-              <span class="navbar-toggler-bar bar2"></span>
-              <span class="navbar-toggler-bar bar3"></span>
-          </button>
-      </div>
-      <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/pesquisa-de-precos']">
-                    <i class="now-ui-icons ui-1_zoom-bold"></i>
-                    <p>Pesquisa de Preços</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/publicidade']">
-                  <i class="now-ui-icons sport_trophy"></i>
-                  <p>Publicidade</p>
-                </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/minha-conta']">
-                <i class="now-ui-icons users_circle-08"></i>
-                <p>Minha Conta</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/lista-de-compras']">
-                <i class="now-ui-icons files_paper"></i>
-                <p>Lista de Compras</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/termos-de-uso']">
-                <i class="now-ui-icons files_single-copy-04"></i>
-                <p>Termos de uso</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/contato']">
-                <i class="now-ui-icons ui-1_email-85"></i>
-                <p>Contato</p>
-              </a>
-            </li>
-          </ul>
-      </div>
+<div class="py-3">
+  <div class="container text-center">
+    <img src="assets/img/logo_bembuscado.png">
   </div>
+</div>
+
+<nav class="navbar navbar-expand-lg justify-content-md-center justify-content-start">
+  <div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mx-auto text-md-center text-left">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pesquisa de preços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Publicidade</a>
+      </li>
+      <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Minha Conta
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Alterar perfil</a>
+                <a class="dropdown-item" href="#">Meus anúncios</a>
+                <a class="dropdown-item" href="#">Deslogar</a>
+              </div>
+            </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Lista de preços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Termos de uso</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contato</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
 </nav>
