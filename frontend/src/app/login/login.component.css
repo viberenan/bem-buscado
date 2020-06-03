@@ -1,0 +1,6 @@
+.btn-primary{background-color:#f96332 !important; width: 100%; border-color:#f96332}
+.btn-primary:hover{border-color:#cf4d22}
+a, a:hover, a:visited, a:focus{color:#f96332; text-decoration: none;}
+.forgotpassword{font-size:12px}
+.forgotpassword:hover{font-weight: bold;}
+.ml-2:hover{font-weight: bold;}

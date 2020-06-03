@@ -1,4 +1,4 @@
-package com.bembuscado.api;
+package com.bembuscado.bembuscado;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

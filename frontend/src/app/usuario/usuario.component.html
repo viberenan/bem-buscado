@@ -1,0 +1,29 @@
+<div class="container">
+    <h2 class="mt-5 mb-3">Cadastro de usuário</h2>
+    <form [formGroup]='form'>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" class="form-control" formControlName="nome" placeholder="Nome completo" name="nome">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="E-mail" name="email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="form-control" formControlName="senha" placeholder="Senha" aria-describedby="senhaTip"
+                    name="senha">
+                <small id="senhaTip" class="form-text text-muted">Dica: 6 a 14 caracteres, incluindo letras, números e
+                    caracteres especiais</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <input type="submit" [disabled]="form.invalid" class="btn btn-primary" (click)="cadastrarUsuario()" value="Cadastrar usuário" />
+            </div>
+        </div>
+    </form>
+</div>
