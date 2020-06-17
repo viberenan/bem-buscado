@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { usuario } from './usuario.model';
-import { CadastroUsuarioService } from './cadastro-usuario.service';
-import { AlertModalService } from '../shared/alert-modal.service';
+import { usuario } from '../model/usuario.model';
+import { CadastroUsuarioService } from '../services/cadastro-usuario.service';
+import { AlertModalService } from '../../shared/alert-modal.service';
 
 @Component({
   selector: 'app-usuario',

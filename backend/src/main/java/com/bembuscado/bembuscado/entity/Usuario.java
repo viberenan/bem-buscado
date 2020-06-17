@@ -1,20 +1,22 @@
 package com.bembuscado.bembuscado.entity;
 
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.bembuscado.bembuscado.enums.PerfilEnum;
-
 
 @Entity
 public class Usuario {
@@ -25,7 +27,10 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String senha;
-	
+
+	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private List<Empresa> empresa;
+
 	@Enumerated(EnumType.STRING)
 	private PerfilEnum perfil;
 
@@ -49,7 +54,7 @@ public class Usuario {
 	}
 
 	public void setSenha(String senha) {
-		 this.senha = senha;
+		this.senha = senha;
 	}
 
 	@NotEmpty(message = "Nome não pode ser vazio.")
@@ -61,7 +66,7 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	@Enumerated(EnumType.STRING)
 	public PerfilEnum getPerfil() {
 		return perfil;
@@ -78,8 +83,14 @@ public class Usuario {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	
+
+	public List<Empresa> getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(List<Empresa> empresa) {
+		this.empresa = empresa;
+	}
 	
 	
 }
